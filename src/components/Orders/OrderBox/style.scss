@@ -1,0 +1,54 @@
+@import "../../../theme/colors.scss";
+
+.container {
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  width: calc(100% - 40px);
+  height: 5rem;
+  border: 1px solid #ececec;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.16);
+  border-radius: 5px;
+  margin: 10px auto 0 auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.status-tag {
+  display: flex;
+  flex-direction: row;
+  transform: rotate(-90deg);
+  background: $almost-black;
+  border-radius: 5px;
+  color: white;
+  align-items: "center";
+  justify-content: "center";
+  padding: 5px 10px 5px 15px;
+  font-family: "Metro-Regular";
+  font-size: 14px;
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  padding-right: 3em;
+  font-family: "Metro-Medium";
+  font-size: 14;
+  color: $grey-dark;
+}
+.order-num {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: "Metro-Bold";
+  color: $forrest;
+}
+.pointer {
+  width: 16px;
+  height: 16px;
+  margin-top: -5px;
+  padding-left: 5;
+}

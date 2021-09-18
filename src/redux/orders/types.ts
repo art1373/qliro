@@ -9,4 +9,6 @@ export interface Order {
   payment_status: string;
   amount: number;
   currency: string;
+  createdAt: number;
+  tag: string;
 }
