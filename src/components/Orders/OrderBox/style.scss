@@ -8,8 +8,9 @@
   border-radius: 5px;
   align-items: center;
   justify-content: space-between;
-  margin: 10px 30px;
-  padding: 10px 0 10px 0;
+  margin: 20px auto;
+  padding: 20px 0 10px 0;
+  width: 90%;
 }
 .container div:not(:first-child) {
   flex: 1;
@@ -24,7 +25,8 @@
   display: flex;
   transform: rotate(-90deg);
   font-size: 12px;
-  padding: 5px 0;
+  padding: 5px 5px;
+  margin-bottom: 10px;
   border-radius: 5px;
   width: 60px;
   justify-content: center;

@@ -1,0 +1,43 @@
+@import "../../theme/colors.scss";
+
+.order-help {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 90%;
+  font-family: "Metro-Medium";
+  margin-bottom: 40px;
+}
+.help {
+  display: flex;
+  align-items: center;
+  color: $forrest;
+  font-size: 12px;
+  & b {
+    background: $grey;
+    width: 15px;
+    height: 15px;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-right: 5px;
+    color: $grey-dark;
+  }
+}
+
+.label-wrap {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid;
+  margin: auto;
+  text-align: left;
+  font-family: "Metro-Regular";
+  font-size: 14px;
+  color: $grey-dark;
+}
+.inner {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+}
