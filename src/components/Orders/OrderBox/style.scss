@@ -2,53 +2,59 @@
 
 .container {
   display: flex;
-  flex-direction: row;
   background: #fff;
-  width: calc(100% - 40px);
-  height: 5rem;
   border: 1px solid #ececec;
   box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.16);
   border-radius: 5px;
-  margin: 10px auto 0 auto;
   align-items: center;
   justify-content: space-between;
+  margin: 10px 30px;
+  padding: 10px 0 10px 0;
 }
-
-.status-tag {
-  display: flex;
-  flex-direction: row;
-  transform: rotate(-90deg);
-  background: $almost-black;
-  border-radius: 5px;
-  color: white;
-  align-items: "center";
-  justify-content: "center";
-  padding: 5px 10px 5px 15px;
-  font-family: "Metro-Regular";
-  font-size: 14px;
-}
-
-.details {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 90%;
-  padding-right: 3em;
+.container div:not(:first-child) {
+  flex: 1;
+  text-align: left;
+  align-items: center;
   font-family: "Metro-Medium";
-  font-size: 14;
-  color: $grey-dark;
+  font-size: 14px;
+  text-transform: capitalize;
 }
-.order-num {
+
+.tag {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  transform: rotate(-90deg);
+  font-size: 12px;
+  padding: 5px 0;
+  border-radius: 5px;
+  width: 60px;
   justify-content: center;
-  font-family: "Metro-Bold";
-  color: $forrest;
+  align-items: center;
+  font-family: "Metro-Medium";
+  text-transform: capitalize;
 }
-.pointer {
-  width: 16px;
-  height: 16px;
-  margin-top: -5px;
-  padding-left: 5;
+.manual {
+  background: $matte-black;
+  color: white;
+}
+.instore {
+  background: $in-progress;
+  color: white;
+}
+.online {
+  background: $background;
+}
+.circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background: red;
+}
+.paid {
+  background: $paid;
+}
+.progress {
+  background: $in-progress;
+}
+.failed {
+  background: $error;
 }

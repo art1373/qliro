@@ -3,7 +3,11 @@ import "./App.scss";
 import Panel from "./pages/Panel";
 
 function App() {
-  return <Panel />;
+  return (
+    <>
+      <Panel />
+    </>
+  );
 }
 
 export default App;

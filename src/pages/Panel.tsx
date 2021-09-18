@@ -9,15 +9,20 @@ import "./panel.scss";
 function Panel() {
   const dispatch = Redux.useDispatch();
   const orders = Redux.useSelector(getOrdersSelector);
-  console.log({ orders });
 
   React.useEffect(() => {
     dispatch(fetchOrders());
   }, [dispatch]);
+
   return (
     <>
-      {orders.length &&
-        orders.map((order: Order) => <OrderBox order={order} />)}
+      {orders.length ? (
+        orders.map((order: Order) => (
+          <OrderBox key={Math.random()} order={order} />
+        ))
+      ) : (
+        <div>loading...</div>
+      )}
     </>
   );
 }
