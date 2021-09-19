@@ -6,7 +6,12 @@ const Labels = () => {
     <>
       <div className="order-help">
         <p>Anne's Orders</p>
-        <div className="help">
+        <div
+          className="help"
+          onClick={() =>
+            window.open("https://career.qliro.com/connect", "_blank")
+          }
+        >
           <b>i</b>
           <p>Help</p>
         </div>

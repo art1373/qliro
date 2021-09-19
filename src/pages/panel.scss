@@ -1,7 +1,21 @@
+.box-parent {
+  transform: scale(1);
+  :hover {
+    transform: scale(1.02);
+    cursor: pointer;
+  }
+}
+
 .loader {
   left: 40vw;
   right: 0;
   top: 20px;
   bottom: 0;
   position: relative;
+}
+.paginate-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 95vw;
 }

@@ -1,7 +1,7 @@
 import * as React from "react";
 import Loader from "react-loader-spinner";
 import * as Redux from "react-redux";
-import { OrderBox, Header, Info, Labels } from "../components";
+import { OrderBox, Header, Info, Labels, Pagination } from "../components";
 import { fetchOrders } from "../redux/orders/actions";
 import { getOrdersSelector } from "../redux/orders/selectors";
 import { Order } from "../redux/orders/types";
@@ -27,7 +27,9 @@ function Panel() {
       <Labels />
       {orders.length ? (
         orders.map((order: Order) => (
-          <OrderBox key={Math.random()} order={order} />
+          <div className="box-parent">
+            <OrderBox key={Math.random()} order={order} />
+          </div>
         ))
       ) : (
         <div className="loader">
@@ -40,6 +42,9 @@ function Panel() {
           />
         </div>
       )}
+      <div className="paginate-wrap">
+        <Pagination pageCount={orders.length || 4} />
+      </div>
     </>
   );
 }
