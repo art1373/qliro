@@ -27,14 +27,18 @@ const OrderBox = ({ order }: Props) => {
   } = order;
 
   return (
-    <div className="container">
-      <Tag tag={tag} />
-      <OrderNumber orderNumber={number} />
-      <OrderDate orderDate={createdAt} />
-      <Store country={country} store={store} />
-      <PaymentMethod payment={payment_method} />
-      <Status paymentStatus={payment_status} />
-      <OrderAmount currency={currency} amount={amount} />
+    <div className="container" data-testid="order-box">
+      <Tag tag={tag} testId="order-box-tag" />
+      <OrderNumber orderNumber={number} testId="order-box-number" />
+      <OrderDate orderDate={createdAt} testId="order-box-date" />
+      <Store country={country} store={store} testId="order-box-store" />
+      <PaymentMethod payment={payment_method} testId="order-box-pay-method" />
+      <Status paymentStatus={payment_status} testId="order-box-status" />
+      <OrderAmount
+        currency={currency}
+        amount={amount}
+        testId="order-box-amount"
+      />
     </div>
   );
 };

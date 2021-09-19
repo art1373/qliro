@@ -7,9 +7,10 @@ import "../../../theme/sharedStyles.scss";
 type Props = {
   country: string;
   store: string;
+  testId: string;
 };
 
-const Flag = ({ country, store }: Props) => {
+const Flag = ({ country, store, testId }: Props) => {
   const getFlag = (country: string) => {
     switch (country) {
       case "SE":
@@ -25,7 +26,7 @@ const Flag = ({ country, store }: Props) => {
     }
   };
   return (
-    <div className="flex-center">
+    <div className="flex-center" data-testid={testId}>
       <div>{getFlag(country)}</div>
       <div className="customPadding">{store}</div>
     </div>

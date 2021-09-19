@@ -27,9 +27,7 @@ function Panel() {
       <Labels />
       {orders.length ? (
         orders.map((order: Order) => (
-          <div className="box-parent">
-            <OrderBox key={Math.random()} order={order} />
-          </div>
+          <OrderBox key={Math.random()} order={order} />
         ))
       ) : (
         <div className="loader">

@@ -17,14 +17,12 @@ const Labels = () => {
         </div>
       </div>
       <div className="label-wrap">
-        <div className="inner">
-          <p>Order Number</p>
-          <p>Created</p>
-          <p>Store</p>
-          <p>Payment Method</p>
-          <p>Payment Status</p>
-          <p>Amount</p>
-        </div>
+        <p>Order Number</p>
+        <p>Created</p>
+        <p>Store</p>
+        <p>Payment Method</p>
+        <p>Payment Status</p>
+        <p>Amount</p>
       </div>
     </>
   );

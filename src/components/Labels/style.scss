@@ -14,7 +14,6 @@
   color: $forrest;
   font-size: 12px;
   cursor: pointer;
-
   & b {
     background: $grey;
     width: 15px;
@@ -30,13 +29,17 @@
 
 .label-wrap {
   display: flex;
-  justify-content: space-between;
-  border: 1px solid;
+  width: 85%;
+  justify-content: space-evenly;
   margin: auto;
-  text-align: left;
-  font-family: "Metro-Regular";
+  font-family: "Metro-Medium";
   font-size: 14px;
   color: $grey-dark;
+  & p {
+    flex: 1;
+    text-align: left;
+    margin-left: 20px;
+  }
 }
 .inner {
   display: flex;

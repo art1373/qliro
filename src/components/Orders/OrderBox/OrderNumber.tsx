@@ -5,11 +5,12 @@ import "./OderNumber.style.scss";
 
 type Props = {
   orderNumber: number | string;
+  testId: string;
 };
 
-const OrderDate = ({ orderNumber }: Props) => {
+const OrderDate = ({ orderNumber, testId }: Props) => {
   return (
-    <div className="flex-center">
+    <div className="flex-center" data-testid={testId}>
       <div>{orderNumber}</div>
       <div>
         <Pointer className="pointer" />

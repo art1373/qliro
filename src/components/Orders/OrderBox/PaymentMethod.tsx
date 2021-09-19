@@ -8,9 +8,10 @@ import "../../../theme/sharedStyles.scss";
 
 type Props = {
   payment: string;
+  testId: string;
 };
 
-const PaymentMethod = ({ payment }: Props) => {
+const PaymentMethod = ({ payment, testId }: Props) => {
   const getPayment = (payment: string) => {
     switch (payment) {
       case "invoice":
@@ -29,7 +30,7 @@ const PaymentMethod = ({ payment }: Props) => {
     }
   };
   return (
-    <div className="flex-center">
+    <div className="flex-center" data-testid={testId}>
       <div>{getPayment(payment)}</div>
       <div className="customPadding">
         <h5>{payment}</h5>
