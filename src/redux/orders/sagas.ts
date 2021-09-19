@@ -8,7 +8,7 @@ function* fetchOrdersSaga(action: any) {
     const { data } = yield call(orderApi.fetchOrdersApi);
 
     const orders = data;
-    yield delay(2000);
+    yield delay(3000);
     if (orders) yield put(ordrActions.setOrders(orders));
 
     if (action.onSuccess) {

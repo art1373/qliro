@@ -1,6 +1,5 @@
 import * as React from "react";
 import "./style.scss";
-import { ReactComponent as Mark } from "../../assets/img/Upsell.svg";
 
 const Labels = () => {
   return (
