@@ -1,0 +1,63 @@
+@import "../../../theme/colors.scss";
+
+.container {
+  display: flex;
+  background: #fff;
+  border: 1px solid #ececec;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.16);
+  border-radius: 5px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px auto;
+  padding: 20px 0 10px 0;
+  width: 90%;
+}
+.container div:not(:first-child) {
+  flex: 1;
+  text-align: left;
+  align-items: center;
+  font-family: "Metro-Medium";
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.tag {
+  display: flex;
+  transform: rotate(-90deg);
+  font-size: 12px;
+  padding: 5px 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  font-family: "Metro-Medium";
+  text-transform: capitalize;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.16);
+}
+.manual {
+  background: $matte-black;
+  color: white;
+}
+.instore {
+  background: $in-progress;
+  color: white;
+}
+.online {
+  background: $background;
+}
+.circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background: red;
+}
+.paid {
+  background: $paid;
+}
+.progress {
+  background: $in-progress;
+}
+.failed {
+  background: $error;
+}

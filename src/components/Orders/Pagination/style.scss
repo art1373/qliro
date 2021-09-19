@@ -1,0 +1,45 @@
+@import "../../../theme/colors.scss";
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  color: $almost-black;
+  justify-content: space-around;
+  width: 20vw;
+  list-style-type: none;
+  margin: 20px;
+  height: 20vh;
+}
+
+.active-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Metro-Light";
+  font-size: 16px;
+  background: $forrest;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.next-label {
+  font-family: "Metro-Medium";
+  font-size: 17px;
+  color: $paid;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.back-label {
+  @extend .next-label;
+  color: $grey-dark;
+}
+.page {
+  margin-top: 20px;
+}
+.page-link {
+  cursor: pointer;
+  font-family: "Metro-Medium";
+}

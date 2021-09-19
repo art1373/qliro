@@ -1,0 +1,27 @@
+@import "./theme/colors";
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background: $background;
+}
+
+@font-face {
+  font-family: "Metro-Regular";
+  src: url("./assets/fonts/Metropolis-Regular.otf");
+}
+
+@font-face {
+  font-family: "Metro-Medium";
+  src: url("./assets/fonts/Metropolis-Medium.otf");
+}
+
+@font-face {
+  font-family: "Metro-Bold";
+  src: url("./assets/fonts/Metropolis-Bold.otf");
+}
+
+@font-face {
+  font-family: "Metro-Light";
+  src: url("./assets/fonts/Metropolis-Light.otf");
+}

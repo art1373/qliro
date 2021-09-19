@@ -1,0 +1,48 @@
+@import "../../theme/colors.scss";
+
+.order-help {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 90%;
+  font-family: "Metro-Medium";
+  margin-bottom: 40px;
+}
+.help {
+  display: flex;
+  align-items: center;
+  color: $forrest;
+  font-size: 12px;
+  cursor: pointer;
+  & b {
+    background: $grey;
+    width: 15px;
+    height: 15px;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-right: 5px;
+    color: $grey-dark;
+  }
+}
+
+.label-wrap {
+  display: flex;
+  width: 85%;
+  justify-content: space-evenly;
+  margin: auto;
+  font-family: "Metro-Medium";
+  font-size: 14px;
+  color: $grey-dark;
+  & p {
+    flex: 1;
+    text-align: left;
+    margin-left: 2.3rem;
+  }
+}
+.inner {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+}
