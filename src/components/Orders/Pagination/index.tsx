@@ -14,16 +14,17 @@ const Pagination = ({ pageCount, handlePageClick }: Props) => {
       nextLabel={"Next"}
       breakLabel={"..."}
       initialPage={0}
-      pageCount={2}
+      pageCount={pageCount}
       marginPagesDisplayed={0}
       pageRangeDisplayed={5}
       onPageChange={handlePageClick}
       containerClassName="pagination"
-      activeClassName="active"
+      activeClassName="active-link"
       disabledClassName="disabled"
       nextClassName="next-label"
       previousClassName="back-label"
-      pageClassName="page-link"
+      pageClassName="page"
+      pageLinkClassName="page-link"
     />
   );
 };

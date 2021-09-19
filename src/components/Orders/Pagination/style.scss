@@ -10,7 +10,8 @@
   margin: 20px;
   height: 20vh;
 }
-.active {
+
+.active-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,31 +23,21 @@
   height: 40px;
   border-radius: 20px;
 }
-.disabled {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Metro-Light";
-  font-size: 12px;
-  color: white;
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
-  font-family: "Metro-Medium";
-  font-size: 8px;
-  cursor: pointer;
-}
+
 .next-label {
   font-family: "Metro-Medium";
   font-size: 17px;
   color: $paid;
   cursor: pointer;
+  margin-top: 20px;
 }
+
 .back-label {
-  font-family: "Metro-Light";
-  font-size: 17px;
-  color: $medium-grey;
-  cursor: pointer;
+  @extend .next-label;
+  color: $grey-dark;
+}
+.page {
+  margin-top: 20px;
 }
 .page-link {
   cursor: pointer;
