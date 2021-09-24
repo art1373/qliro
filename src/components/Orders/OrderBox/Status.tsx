@@ -6,16 +6,22 @@ type Props = {
   testId: string;
 };
 
+enum PayStauts {
+  PAID = "paid",
+  PROGRESS = "in progress",
+  FAILED = "failed",
+}
+
 const Status = ({ paymentStatus, testId }: Props) => {
   const circleRenderer = (payStatus: string) => {
     switch (payStatus) {
-      case "paid":
+      case PayStauts.PAID:
         return <div className="circle paid" data-testid="status-elipse" />;
 
-      case "in progress":
+      case PayStauts.PROGRESS:
         return <div className="circle progress" data-testid="status-elipse" />;
 
-      case "failed":
+      case PayStauts.FAILED:
         return <div className="circle failed" data-testid="status-elipse" />;
 
       default:

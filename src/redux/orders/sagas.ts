@@ -9,13 +9,16 @@ function* fetchOrdersSaga(action: any) {
 
     const orders = data;
     yield delay(3000);
-    if (orders) yield put(ordrActions.setOrders(orders));
+    if (orders.length) yield put(ordrActions.setOrders(orders));
 
     if (action.onSuccess) {
       action.onSuccess();
     }
   } catch (error) {
-    console.log({ error });
+    if (action.onFailure) {
+      console.log({ error });
+      action.onFailure();
+    }
   }
 }
 

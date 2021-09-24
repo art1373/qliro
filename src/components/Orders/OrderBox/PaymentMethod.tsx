@@ -11,18 +11,31 @@ type Props = {
   testId: string;
 };
 
+enum PayMethods {
+  INVOICE = "invoice",
+  PAYPAL = "paypal",
+  TRUSTLLY = "trustly",
+  VISA = "visa",
+  MASTER = "mastercard",
+  AMEX = "american express",
+}
+
 const PaymentMethod = ({ payment, testId }: Props) => {
   const getPayment = (payment: string) => {
     switch (payment) {
-      case "invoice":
+      case PayMethods.INVOICE:
         return <Qliro className="flag" style={{ width: 25, height: 25 }} />;
-      case "paypal":
+
+      case PayMethods.PAYPAL:
         return <img className="pay-icons" src={PayPal} alt="PayPal" />;
-      case "visa":
+
+      case PayMethods.VISA:
         return <img className="pay-icons" src={Visa} alt="Visa" />;
-      case "american express":
+
+      case PayMethods.AMEX:
         return <img className="pay-icons" src={AMEX} alt="AMEX" />;
-      case "trustly":
+
+      case PayMethods.TRUSTLLY:
         return <Trustly className="flag" />;
 
       default:
