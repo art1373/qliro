@@ -2,7 +2,7 @@ import * as React from "react";
 import Loader from "react-loader-spinner";
 import * as Redux from "react-redux";
 import { OrderBox, Header, Info, Labels, Pagination } from "../components";
-import { fetchOrders } from "../redux/orders/actions";
+import { fetchOrders } from "../redux/orders/orderSlice";
 import { getOrdersSelector } from "../redux/orders/selectors";
 import { Order } from "../redux/orders/types";
 import "./panel.scss";
@@ -12,12 +12,7 @@ function Panel() {
   const orders = Redux.useSelector(getOrdersSelector);
 
   React.useEffect(() => {
-    dispatch(
-      fetchOrders(
-        () => {},
-        () => {}
-      )
-    );
+    dispatch(fetchOrders());
   }, [dispatch]);
 
   return (

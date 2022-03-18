@@ -1,12 +1,11 @@
-import { createStore, applyMiddleware, combineReducers } from "redux";
-import createSagaMiddleware from "redux-saga";
+import { configureStore } from "@reduxjs/toolkit";
+import { combineReducers } from "redux";
 import { all } from "redux-saga/effects";
-import { authReducer } from "./auth/reducer";
-import { orderReducer } from "./orders/reducer";
 import { orderSagas } from "./orders/sagas";
 import { persistStore, persistReducer } from "redux-persist";
+import createSagaMiddleware from "redux-saga";
 import storage from "redux-persist/lib/storage";
-import { composeWithDevTools } from "redux-devtools-extension";
+import orderReducer from "./orders/orderSlice";
 
 const persistConfig = {
   key: "root",
@@ -15,7 +14,6 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
   order: orderReducer,
-  auth: authReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
@@ -28,10 +26,11 @@ const sagaMiddleware = createSagaMiddleware();
 
 const middlewares = [sagaMiddleware];
 
-export const store = createStore(
-  persistedReducer,
-  composeWithDevTools(applyMiddleware(...middlewares))
-);
+export const store = configureStore({
+  reducer: persistedReducer,
+  middleware: middlewares,
+  devTools: process.env.NODE_ENV !== "production",
+});
 
 export const presistor = persistStore(store);
 

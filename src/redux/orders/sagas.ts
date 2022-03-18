@@ -1,15 +1,14 @@
 import { call, delay, put, takeLatest } from "redux-saga/effects";
 import * as orderApi from "../../api/orders";
-import * as ordrActions from "../orders/actions";
-import * as orderTypes from "../orders/types";
+import { fetchOrders, setOrders } from "../orders/orderSlice";
 
 function* fetchOrdersSaga(action: any) {
   try {
     const { data } = yield call(orderApi.fetchOrdersApi);
 
     const orders = data;
-    yield delay(3000);
-    if (orders) yield put(ordrActions.setOrders(orders));
+    yield delay(2000);
+    if (orders) yield put(setOrders(orders));
 
     if (action.onSuccess) {
       action.onSuccess();
@@ -20,7 +19,7 @@ function* fetchOrdersSaga(action: any) {
 }
 
 function* watchFetchOrders() {
-  yield takeLatest(orderTypes.FETCH_ORDERS, fetchOrdersSaga);
+  yield takeLatest(fetchOrders, fetchOrdersSaga);
 }
 
 export const orderSagas = [watchFetchOrders()];
